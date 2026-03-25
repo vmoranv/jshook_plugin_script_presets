@@ -1,0 +1,4 @@
+name: script-presets
+description: Scaffold plugin for externalizing built-in page script preset packs from jshookmcp core.
+author: vmoranv
+source_repo: https://github.com/vmoranv/jshook_plugin_script_presets

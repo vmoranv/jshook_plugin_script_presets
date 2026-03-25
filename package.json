@@ -1,0 +1,23 @@
+{
+  "name": "@jshookmcpextension/plugin-script-presets",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Scaffold plugin repository for externalizing built-in page script preset packs from jshookmcp.",
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "check": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@jshookmcp/extension-sdk": "^0.2.0",
+    "@modelcontextprotocol/sdk": "^1.27.1"
+  },
+  "devDependencies": {
+    "@types/node": "^25.3.0",
+    "typescript": "^5.9.3"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "packageManager": "pnpm@10.28.2"
+}
