@@ -49,7 +49,7 @@ async function handleCatalog(_args: ToolArgs, ctx: PluginLifecycleContext) {
   });
 }
 
-export default createExtension('io.github.vmoranv.script-presets', '0.1.0')
+const plugin = createExtension('io.github.vmoranv.script-presets', '0.1.0')
   .compatibleCore('>=0.2.0')
   .configDefault(`plugins.${PLUGIN_SLUG}.enabled`, true)
   .configDefault(`plugins.${PLUGIN_SLUG}.mode`, 'scaffold')
@@ -74,3 +74,12 @@ export default createExtension('io.github.vmoranv.script-presets', '0.1.0')
     if (!enabled) return { valid: false, errors: ['Plugin disabled by config'] };
     return { valid: true, errors: [] };
   });
+
+Object.defineProperty(plugin, 'workflows', {
+  value: [],
+  enumerable: false,
+  configurable: true,
+  writable: false,
+});
+
+export default plugin;
